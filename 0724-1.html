@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="test">123</div>
-    <table>
-    <tr>
+    <table class="my_table">
+    <tr class="qq">
         <td class="g">1</td>
         <td>2</td>
         <td>3</td>
@@ -21,10 +21,30 @@
         <td>6</td>
     </tr>
 </table>
+
+<table class="my_table ">
+    <tr class="qq">
+        <td class="g">10</td>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+    <tr class="qq">
+        <td class="g">13</td>
+        <td>14</td>
+        <td>15</td>
+    </tr>
+</table>
+
 <script> 
     var eee = document.querySelectorAll('.g');
     // console.log(eee);
     let a = document.getElementById('test')
+
+let qq = document.querySelectorAll('.qq')[2];//0->1  1->2 
+qq.querySelector('.g').innerHTML = ('<h2>Hello</h2>'); 
+// queryselector抓以下
+qq.closest('.my_table').style.backgroundColor = 'red';
+// closest抓以上  可試試closest後面改成.g & 在.my_table 後面加g看差別 
     //這是js的單行註解
     /*如果我有
     一段區域可以這樣註解*/
