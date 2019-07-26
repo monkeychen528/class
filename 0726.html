@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="test" >
+    <button  onclick="doConvert()">Submit</button>
+    <div id="sendout"></div>
+
+
+    <script>
+        // let test = document.querySelector('#test'),
+        //     sendout = document.querySelector('#sendout');
+
+        // function doConvert(){
+        //     console.log(test.value);
+        //     // sendout.innerHTML = test.value;
+        //     sendout.innerHTML = parseInt(test.value,16);
+        //     // 字串16進位轉成10進位
+        // }
+
+            let sendout = document.querySelector('#sendout'),
+                str = "abcd我是大標這是測試efjs";
+                
+            function 任意取名(s){
+                sendout.innerHTML += s +'<br>';
+            }
+            
+            任意取名( str.charAt(3));//注意位置0=1,1=2,2=3
+            任意取名( str.length );//中文目前也是1位元
+            任意取名( str.charCodeAt(3) );//d的字碼是100中文字碼較多
+            任意取名( str.indexOf('我'))//我這個'字串'的位置
+            任意取名( str.lastIndexOf('大標, 3') )
+            任意取名( str.lastIndexOf('f,5') )
+            任意取名( str.slice(6,9) )//包含6, 9的位置不會包含
+            任意取名( str.split('大標').join('替換字132').length);
+            任意取名( str.split('大標').join('<span class="red">替換字132</span>'));
+
+    </script>
+</body>
+</html>
