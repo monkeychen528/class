@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="gender">性別</label>
+    <select name="gender" id="gender">
+        <option value="">--請選擇--</option>
+        <option value="female">女生</option>
+        <option value="male">男生</option>
+    </select>
+    <br>
+    <label for="age">年齡</label>
+    <input type="number" name="number" id="age">
+    <br>
+    <button onclick="dotest()">測試</button>
+
+    <div id="my_out"></div>
+    <script>
+        let my_out = document.querySelector('#my_out');
+        
+        
+        function dotest(){
+            let age = parseInt(document.querySelector('#age').value),
+            gender = document.querySelector('#gender').value;
+
+            if ( age >= 20 && gender === 'female' ) {
+                my_out.innerHTML = ('歡迎')
+            } 
+            else {
+                my_out.innerHTML = ('禁止進入')
+            }
+            //可以測試把function 裡的var拿到外面試試看 -> 'dotest'這個function會測不到值所以會一直出現禁止進入
+        }
+    </script>
+</body>
+</html>
